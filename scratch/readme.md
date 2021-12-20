@@ -49,3 +49,10 @@ class AppModule{}
 - nest new [project_name]
 - nest generate module messages
 - nest generate controller messages/messages --flat
+
+## Difference betweem Services and Repositories
+
+- Both are classes
+- Services are placed to put any business logic while repositories are places to put storage-related logic(directly interact with DB or read/write to a file).
+- Service uses one or more repositories to find or store data while repositories ends up being an TypeORM entity, a Mongoose schema or similar.
+- Frequently end up having very simiar method names.
