@@ -56,3 +56,19 @@ class AppModule{}
 - Services are placed to put any business logic while repositories are places to put storage-related logic(directly interact with DB or read/write to a file).
 - Service uses one or more repositories to find or store data while repositories ends up being an TypeORM entity, a Mongoose schema or similar.
 - Frequently end up having very simiar method names.
+
+## Dependency Injection and Inversion of Control
+
+- Inversion of control principle states that classes should not create instances of its dependencies on its own.
+
+- Three Scenarios:
+  - Service creates its own copy of its dependencies. - Bad
+  - Service receive its dependencies as argument. - Better
+  - Service recevies its dependencies and it doesn't specifically require a specific repository - Best - Relay of Interface
+
+- DI Container Flow
+  - At startup, register all classes with the container
+  - Container will figure out what each dependency each class has
+  - We then ask the container create an instance of a class for us
+  - Container creates all the required dependencies and give us the instance
+  - Container will hold onto the created dependency instances and reuse them if needed
