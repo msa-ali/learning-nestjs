@@ -30,3 +30,11 @@ User Repository
 Reports Controllers
 Reports Service
 Reports Repository
+
+## Notes
+
+### Creating an Entity
+
+1. Create an entity file, and  create a class in it that lists all the properties that your entities will have
+2. Connect the entity to its parent module. This creates a repository.
+3. Connect the entity to the root connection (in app module).
