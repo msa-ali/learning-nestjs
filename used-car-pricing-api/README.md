@@ -1,4 +1,4 @@
-# Used Car Pricing API
+# Car Pricing API
 
 A simple Nest.js API for finding estimates for used car pricing.
 
