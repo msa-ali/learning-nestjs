@@ -72,3 +72,14 @@ class AppModule{}
   - We then ask the container create an instance of a class for us
   - Container creates all the required dependencies and give us the instance
   - Container will hold onto the created dependency instances and reuse them if needed
+
+## Interceptors
+
+- Similar to middlewares
+- Can mess around with incoming requests and/or outgoing responses
+- Interceptors can be applied to a single handler,all the handlers in a controller or globally.
+
+``
+  class CustomInterceptor
+  intercept(context: ExecutionContext, next: CallHandlers)
+``
