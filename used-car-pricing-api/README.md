@@ -38,3 +38,13 @@ Reports Repository
 1. Create an entity file, and  create a class in it that lists all the properties that your entities will have
 2. Connect the entity to its parent module. This creates a repository.
 3. Connect the entity to the root connection (in app module).
+
+### Setting up session
+
+- Cookie-Session library looks at the Cookie Header
+- Decodes the string, resulting in an object
+- We get access to session object in a request handler using a decorator
+- We add/remove/change properties on the session object
+- Cookie session sees the updated session and turns it into an encrypted string
+- String sent back in the Set-Cookie header on the response object
+  
